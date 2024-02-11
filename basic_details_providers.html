@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>User Details - Job Providers</title>
     <style>
         body {
             font-family: 'Libre Baskerville', cambria;
-            background-color: lightblue ;
+            background-color: lightblue;
             margin: 0;
             padding: 20px;
-            padding-right: 50px;
-            padding-left: 50px;
-            padding-top: 5px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -20,16 +18,18 @@
         }
 
         .login-container {
+            margin-top: 100px;
             background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
+            padding: 30px;
+            border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            width: 500px;
+            text-align: center;
         }
 
         .login-container h2 {
-            text-align: center;
             color: #333;
+            margin-bottom: 20px;
         }
 
         .login-form {
@@ -38,68 +38,83 @@
 
         .form-group {
             margin-bottom: 15px;
+            flex-direction: column;
         }
 
         .form-group label {
+            text-align: left;
             display: block;
             margin-bottom: 5px;
-            color: #666;
+            color: #555;
         }
 
         .form-group input {
             width: 100%;
-            padding: 8px;
+            padding: 10px;
             box-sizing: border-box;
             border: 1px solid #ccc;
-            border-radius: 3px;
+            border-radius: 5px;
+            margin-top: 5px;
         }
 
         .form-group button {
-            background-color: #1b5ab1 ;
+            background-color: #1b5ab1;
             color: #fff;
             padding: 10px;
             border: none;
-            border-radius: 3px;
+            border-radius: 5px;
             cursor: pointer;
             width: 100%;
         }
 
         .form-group button:hover {
-            background-color: #1b5ab1 ;
+            background-color: #0056b3;
         }
 
-        .form-group .generate-otp {
+        .generate-otp {
             background-color: #007bff;
         }
 
-        .form-group .generate-otp:hover {
+        .generate-otp:hover {
             background-color: #0056b3;
         }
     </style>
 </head>
-<body>
 
+<body>
     <div class="login-container">
-        <h2>Login</h2>
+        <h2>User Details Form</h2>
+        <form action="#" method="post" class="login-form">
             <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="first_name" required>
             </div>
+
             <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name" required>
             </div>
+
             <div class="form-group">
-                <a href="description.html"><button type="submit">Sign In</button></a>
+                <label for="phone_number">Phone Number:</label>
+                <input type="text" id="phone_number" name="phone_number" required>
             </div>
+
             <div class="form-group">
-                <a href="basic_details_seekers.html"><button type="submit">Sign Up</button></a>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
             </div>
+
             <div class="form-group">
-                <a href="choice.html"><button type="submit">Go Back</button></a>
+                <label for="pincode">Pincode:</label>
+                <input type="text" id="pincode" name="pincode" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Submit</button>
             </div>
         </form>
     </div>
-
 </body>
+
 </html>

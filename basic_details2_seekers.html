@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details - Job Seekers</title>
+    <style>
+        body {
+            font-family: 'Libre Baskerville', cambria;
+            background-color: lightblue;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .login-form {
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        .form-group input[type="checkbox"] {
+            margin-top: 0;
+        }
+
+        .form-group button {
+            background-color: #1b5ab1;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+
+        .generate-otp {
+            background-color: #007bff;
+        }
+
+        .generate-otp:hover {
+            background-color: #0056b3;
+        }
+
+        .form-group input[type="checkbox"] {
+            margin-top: 0;
+            margin-bottom: 2px; /* Reduced margin between checkboxes */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>User Details Form</h2>
+        <form action="#" method="post" class="login-form">
+            <div class="form-group">
+                <label for="profession">• Profession (before retirement):</label>
+                <input type="text" id="profession" name="profession" required>
+            </div>
+
+            <div class="form-group">
+                <label for="skills">• Skills:</label>
+                <input type="text" id="skills" name="skills">
+            </div>
+
+            <div class="form-group">
+                <label>• Areas of Interest:</label>
+                <label for="Science">
+                    <input type="checkbox" id="checkbox1" name="preference1" value="option1"> Science
+                </label>
+                <label for="Art">
+                    <input type="checkbox" id="checkbox2" name="preference2" value="option2"> Art
+                </label>
+                <label for="Language">
+                    <input type="checkbox" id="checkbox3" name="preference3" value="option3"> Language
+                </label>
+                <label for="Communication">
+                    <input type="checkbox" id="checkbox3" name="preference3" value="option3"> Communication
+                </label>
+                <label for="Finance">
+                    <input type="checkbox" id="checkbox3" name="preference3" value="option3"> Finance
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label>• Medical conditions(if any):</label>
+                <label for="High Blood Pressure">
+                    <input type="checkbox" id="checkbox1" name="preference1" value="option1"> High Blood Pressure
+                </label>
+                <label for="Diabetes">
+                    <input type="checkbox" id="checkbox2" name="preference2" value="option2"> Diabetes
+                </label>
+                <label for="Arthritis">
+                    <input type="checkbox" id="checkbox3" name="preference3" value="option3"> Arthritis
+                </label>
+                <label for="Breathing">
+                    <input type="checkbox" id="checkbox3" name="preference3" value="option3"> Breathing Issues
+                </label>
+                <label for="Others">
+                    <input type="checkbox" id="checkbox3" name="preference3" value="option3"> Others
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label for="specs">• Any other specifications required:</label>
+                <input type="text" id="specs" name="specs">
+            </div>
+
+            <div class="form-group">
+                <a href="description.html"><button type="submit">Submit</button></a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
