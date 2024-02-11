@@ -1,4 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 *{
-    margin:0px;
-    padding:0px;
+    box-sizing: border-box;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 600;
+    font-size: 20px;
 }
+
+ html , body{
+     margin: 0;
+     padding: 0;
+     background-color: #e9eaed;
+ }
+
+ .main-header{
+    margin: 0;
+    background-color: #27181c ;
+    color:white;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding:10px 10%;
+ }
+ 
+ .banner{
+    margin:0;
+    padding:0.2em;
+    font-size: 25px;
+    cursor:pointer;
+ }
+
+ .banner a{
+    text-decoration: none;
+    font-size: 22px;
+ }
+
+ .banner a:visited{
+    text-decoration: none;
+    color: white;
+ }
+
+ .nav {
+    margin:0;
+    list-style-type: none;
+ }
+
+ .nav li{
+    display: inline-block;
+    padding: 0 20px;
+ }
+
+ .nav a{
+   text-decoration: none;
+ }
+
+ .nav li:hover{
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    text-decoration: underline;
+ }
+
+
+ .button{
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.67em;
+    margin:0.5em;
+    cursor:pointer;
+    border: 0;
+    border-radius:10px;
+    color: white;
+ }
+
+ .button-header-container{
+    margin-left:auto;
+ }
+
+ .button-header{
+    background-color:#5b4148 ;
+ }
+
+ .button-header:hover{
+    background-color: #73535b;
+    font-size: 21px;
+ }
