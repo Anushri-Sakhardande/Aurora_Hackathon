@@ -83,3 +83,38 @@
     background-color: #73535b;
     font-size: 21px;
  }
+
+ .main-header-basicdetails{
+    margin: 0;
+    background-color: #27181c ;
+    color:white;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding:10px 10%;
+ }
+
+.form-element {
+    max-width: 600px; /* Adjust the max-width as needed */
+    margin: auto;
+    display: flex; /* Use flexbox for layout */
+}
+
+.column {
+    flex: 1; /* Each column takes equal space */
+    margin-right: 20px; /* Adjust the margin between columns as needed */
+}
+
+/* Optional: Style labels and inputs */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
