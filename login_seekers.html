@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <style>
         body {
             font-family: 'Libre Baskerville', cambria;
-            background-color: lightblue ;
+            background-color: lightblue;
             margin: 0;
             padding: 20px;
             padding-right: 50px;
@@ -55,7 +56,7 @@
         }
 
         .form-group button {
-            background-color: #1b5ab1 ;
+            background-color: #1b5ab1;
             color: #fff;
             padding: 10px;
             border: none;
@@ -65,7 +66,7 @@
         }
 
         .form-group button:hover {
-            background-color: #1b5ab1 ;
+            background-color: #1b5ab1;
         }
 
         .form-group .generate-otp {
@@ -77,29 +78,84 @@
         }
     </style>
 </head>
-<body>
 
+<body>
     <div class="login-container">
         <h2>Login</h2>
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div class="form-group">
-                <a href="listings.html"><button type="submit">Sign In</button></a>
-            </div>
-            <div class="form-group">
-                <a href="basic_details_seekers.html"><button type="submit">Sign Up</button></a>
-            </div>
-            <div class="form-group">
-                <a href="index.html"><button type="submit">Go Back</button></a>
-            </div>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+            <a href="listings.html"><button type="submit" >Sign In</button></a>
+        </div>
+        <div class="form-group">
+            <button type="submit" id="signUp">Sign Up</button>
+        </div>
+        <div class="form-group">
+            <a href="index.html"><button type="submit">Go Back</button></a>
+        </div>
         </form>
     </div>
 
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getDatabase } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDG19yiQEAV_PMl9jmeofSFV5t0tRkAVOU",
+            authDomain: "authentication-si.firebaseapp.com",
+            databaseURL: "https://authentication-si-default-rtdb.firebaseio.com",
+            projectId: "authentication-si",
+            storageBucket: "authentication-si.appspot.com",
+            messagingSenderId: "739173820545",
+            appId: "1:739173820545:web:6d7324c312e08f0a618580"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const auth = getAuth();
+
+        document.getElementById('signUp').addEventListener('click', (c) => {
+            var email=document.getElementById('email').value;
+            var password=document.getElementById('password').value;
+            var username=document.getElementById('username').value;
+            const auth = getAuth();
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // Signed up 
+                    const user = userCredential.user;
+                    alert("User created!");
+                    window.location.href="basic_details_providers.html"
+                    // ...
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    alert("Email invalid or password too short");
+                    // ..
+                });
+        })
+    </script>
+
+
+
 </body>
+
 </html>
