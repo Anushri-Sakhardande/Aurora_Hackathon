@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var jobTitle = card.querySelector('.job-heading').textContent;
         var jobLocation = card.querySelector('.job-desc-loc').textContent;
         var jobDescription = card.querySelector('.job-desc').textContent;
-
+        con
         // Populate the job details in the new HTML section
         var listingSection = document.querySelector('.listings');
         var newCard = document.createElement('div');

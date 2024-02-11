@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
+    <title>Second Innings</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <h1 class="banner"><a href="index.html">Second Innings</a></h1>
+      <nav>
+        <ul class="nav">
+          <li><a href="index.html">Jobs</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+      <div class="button-header-container">
+        <button type="button" class="button button-header">Log Out</button>
+      </div>
+    </header>
+    <div class="accessibility">
+      <nav>
+        <ul class="nav">
+          <li>
+            <select id="fontSizeSelector">
+              <option value="16" selected>Small</option>
+              <option value="20">Medium</option>
+              <option value="24">Large</option>
+            </select>
+          </li>
+          <li id="screenReaderButton">Screen Reader</li>
+          <li id="google_translate_element"></li>
+        </ul>
+      </nav>
+    </div>
+    <section class="listings">
+      <h1 class="listing-heading">Jobs in your area</h1>
+      <div class="card">
+        <div class="job-desc">
+          <h2 class="job-heading">Museum Guide at MAP</h2>
+          <p class="job-desc-loc">Location:Manipal, Karnataka</p>
+          <p class="job-desc">
+            Welcome visitors, provide information about exhibits, and ensure a
+            positive visitor experience at the museum.
+          </p>
+        </div>
+        <a href="description.html"
+          ><button onclick="loadDescription(this)">Read More</button></a
+        >
+      </div>
+
+      <div class="card">
+        <div class="job-desc">
+          <h2 class="job-heading">Library Assistant Udupi Public Library</h2>
+          <p class="job-desc-loc">Location:Manipal, Karnataka</p>
+          <p class="job-desc">
+            Assist patrons with locating books, organizing shelves, and
+            maintaining a tidy and welcoming environment in the library.
+          </p>
+        </div>
+        <a href="description.html"
+          ><button onclick="loadDescription(this)">Read More</button></a
+        >
+      </div>
+
+
+      <div class="card">
+        <div class="job-desc">
+          <h2 class="job-heading">Music Tutor</h2>
+          <p class="job-desc-loc">Location: Manipal, Karnataka</p>
+          <p class="job-desc">
+            Teach children aged 10-15 basics of music and singing.
+          </p>
+        </div>
+        <a href="description.html"
+          ><button onclick="loadDescription(this)">Read More</button></a
+        >
+      </div>
+
+      <div class="card">
+        <div class="job-desc">
+          <h2 class="job-heading">Tax Consultant</h2>
+          <p class="job-desc-loc">Location: Udupi, Karnataka</p>
+          <p class="job-desc">
+            Mentor young adults in filing taxes.
+          </p>
+        </div>
+        <a href="description.html"
+          ><button onclick="loadDescription(this)">Read More</button></a
+        >
+      </div>
+
+      <div class="card">
+        <div class="job-desc">
+          <h2 class="job-heading">Kannada Translator</h2>
+          <p class="job-desc-loc">Location: Udupi, Karnataka</p>
+          <p class="job-desc">
+            Help in translating 20 books to Kannada. Flexible hours.
+          </p>
+        </div>
+        <a href="description.html"
+          ><button onclick="loadDescription(this)">Read More</button></a
+        >
+      </div>
+      <a href="choice.html">Amruni</a>
+    </section>
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </body>
+</html>
