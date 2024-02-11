@@ -53,6 +53,11 @@
    text-decoration: none;
  }
 
+a:visited{
+    text-decoration: none;
+    color: inherit
+ }
+
  .nav li:hover{
     transition: all 0.3s ease 0s;
     cursor: pointer;
@@ -116,7 +121,11 @@
     margin-bottom: 10px;
 }
 
-.desc {
+.job-heading{
+    color: black;
+}
+
+.job-desc {
     font-size: 16px;
     color: #666;
 }
