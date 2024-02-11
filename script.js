@@ -21,24 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     );
 }
 
-    function loadDescription(button) {
-        // Retrieve job details from the current card
-        var card = button.closest('.card');
-        var jobTitle = card.querySelector('.job-heading').textContent;
-        var jobLocation = card.querySelector('.job-desc-loc').textContent;
-        var jobDescription = card.querySelector('.job-desc').textContent;
-        con
-        // Populate the job details in the new HTML section
-        var listingSection = document.querySelector('.listings');
-        var newCard = document.createElement('div');
-        newCard.classList.add('card');
-        newCard.innerHTML = `
-            <h2 class="job-heading">${jobTitle}</h2>
-            <p class="job-desc-loc">${jobLocation}</p>
-            <p class="job-desc">${jobDescription}</p>
-        `;
-        listingSection.appendChild(newCard);
-    }
+
 
 
 
