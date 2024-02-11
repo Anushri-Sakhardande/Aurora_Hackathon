@@ -58,12 +58,12 @@
   <div class="offer">
     <h2>Offer Details</h2>
     <div class="offer-info">
-      <p><strong>Offer Name:</strong> Cyrus Aloowalla Doe</p>
+      <p><strong>Offer Name:</strong> Cyrus Aloowalla </p>
       <p><strong>Age:</strong> 59</p>
       <p><strong>Offer Description:</strong>Museum guide at MAP</p>
     </div>
-    <button class="accept" onclick="acceptOffer('Cyrus Aloowalla Doe')">Accept Offer</button>
-    <button class="reject" onclick="rejectOffer('Cyrus Aloowalla Doe')">Reject Offer</button>
+    <button class="accept" onclick="acceptOffer('Cyrus Aloowalla')">Accept Offer</button>
+    <button class="reject" onclick="rejectOffer('Cyrus Aloowalla')">Reject Offer</button>
   </div>
 
   <div class="offer">
@@ -71,7 +71,7 @@
     <div class="offer-info">
       <p><strong>Offer Name:</strong> Rick Astley</p>
       <p><strong>Age:</strong> 63</p>
-      <p><strong>Offer Description:</strong>Museum guide at MAP</p>
+      <p><strong>Offer Description:</strong>Kannada translator</p>
     </div>
     <button class="accept" onclick="acceptOffer('Rick Astley')">Accept Offer</button>
     <button class="reject" onclick="rejectOffer('Rick Astley')">Reject Offer</button>
@@ -135,20 +135,16 @@ function acceptOffer(offerName) {
   .then(response => {
     if (response.ok) {
       console.log("Offer accepted successfully");
-      // Optionally, redirect to a success page or update UI
     } else {
       console.error("Failed to accept offer");
-      // Optionally, display an error message to the user
     }
   })
   .catch(error => {
     console.error('Error:', error);
-    // Optionally, display an error message to the user
   });
 }
 
 function rejectOffer(offerName) {
-  // Send request to server to reject the offer
   fetch('/rejectOffer', {
     method: 'POST',
     headers: {
