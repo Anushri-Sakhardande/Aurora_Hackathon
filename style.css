@@ -3,7 +3,7 @@
     box-sizing: border-box;
     font-family: 'Libre Baskerville', serif;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 15px;
 }
 
  html , body{
@@ -14,12 +14,12 @@
 
  .main-header{
     margin: 0;
-    background-color: #27181c ;
+    background-color: #1b365d ;
     color:white;
     display:flex;
     justify-content: flex-start;
     align-items: center;
-    padding:10px 10%;
+    padding:10px;
  }
  
  .banner{
@@ -76,45 +76,95 @@
  }
 
  .button-header{
-    background-color:#5b4148 ;
+    background-color:#1b5ab1 ;
  }
 
  .button-header:hover{
-    background-color: #73535b;
-    font-size: 21px;
+    opacity:80%;
  }
 
- .main-header-basicdetails{
-    margin: 0;
-    background-color: #27181c ;
-    color:white;
-    display:flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding:10px 10%;
+ .accessibility{
+    background-color:#1b5ab1;
+    padding:5px;
+    color: white;
  }
 
-.form-element {
-    max-width: 600px; /* Adjust the max-width as needed */
-    margin: auto;
-    display: flex; /* Use flexbox for layout */
+ .goog-te-banner-frame.skiptranslate {
+    display: none !important;
 }
 
-.column {
-    flex: 1; /* Each column takes equal space */
-    margin-right: 20px; /* Adjust the margin between columns as needed */
+.listings {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
 }
 
-/* Optional: Style labels and inputs */
-label {
-    display: block;
-    margin-bottom: 5px;
+.listing-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-input {
-    width: 100%;
-    padding: 8px;
+.card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.card h2 {
+    font-size: 20px;
     margin-bottom: 10px;
-    box-sizing: border-box;
 }
 
+.desc {
+    font-size: 16px;
+    color: #666;
+}
+
+button {
+    background-color: #1d3d60;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 80%;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .listings {
+        padding: 10px;
+    }
+
+    .listing-heading {
+        font-size: 20px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card h2 {
+        font-size: 18px;
+    }
+
+    .desc {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+}
+
+
+ @media (max-width:950px){
+    .nav li {
+        display: block;
+        padding: 10px 0;
+    }
+  }
