@@ -135,20 +135,16 @@ function acceptOffer(offerName) {
   .then(response => {
     if (response.ok) {
       console.log("Offer accepted successfully");
-      // Optionally, redirect to a success page or update UI
     } else {
       console.error("Failed to accept offer");
-      // Optionally, display an error message to the user
     }
   })
   .catch(error => {
     console.error('Error:', error);
-    // Optionally, display an error message to the user
   });
 }
 
 function rejectOffer(offerName) {
-  // Send request to server to reject the offer
   fetch('/rejectOffer', {
     method: 'POST',
     headers: {
