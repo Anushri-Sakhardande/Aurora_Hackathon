@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
+    <title>Second Innings</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <h1 class="banner"><a href="index.html">Second Innings</a></h1>
+      <nav>
+        <ul class="nav">
+          <li><a>Jobs</a></li>
+          <li>Dashboard</li>
+        </ul>
+      </nav>
+      <div class="button-header-container">
+        <button type="button" class="button button-header">Log Out</button>
+      </div>
+    </header>
+    <div class="accessibility">
+      <nav>
+        <ul class="nav">
+          <li>
+            <select id="fontSizeSelector">
+              <option value="16" selected>Small</option>
+              <option value="20">Medium</option>
+              <option value="24">Large</option>
+            </select>
+          </li>
+          <li id="screenReaderButton">Screen Reader</li>
+          <li id="google_translate_element"></li>
+        </ul>
+      </nav>
+    </div>
+    <section class="listings">
+      <h1 class="listing-heading">Creator's dashboard</h1>
+      <div class="card">
+        <h2>Upload job offers</h2>
+        <div class="desc">
+            <a href="upload.html" ><button onclick="loadDescription()">Click here</button></a>
+        </div>
+    </div>
+    </section>
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </body>
+</html>
