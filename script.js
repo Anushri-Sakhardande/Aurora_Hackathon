@@ -20,4 +20,23 @@ document.addEventListener('DOMContentLoaded', function () {
         'google_translate_element'
     );
 }
+
+    function loadDescription() {
+        // Get the URL of the description.html file from the clicked button's parent anchor tag
+        var descriptionUrl = event.currentTarget.parentNode.getAttribute('href');
+        
+        // Fetch the description from the URL
+        fetch(descriptionUrl)
+            .then(response => response.text())
+            .then(data => {
+                // Extract the description content
+                var tempElement = document.createElement('div');
+                tempElement.innerHTML = data;
+                var descriptionContent = tempElement.querySelector('.desc').innerHTML;
+
+                // Update the description in the current card
+                event.currentTarget.parentNode.querySelector('.desc').innerHTML = descriptionContent;
+            });
+    }
+
   
