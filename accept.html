@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="wNameth=device-wNameth, initial-scale=1.0">
+<title>Offer Acceptance</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  .container {
+    max-wNameth: 800px;
+    margin: 0 auto;
+  }
+  .offer {
+    border: 1px solName #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  h2 {
+    margin-top: 0;
+  }
+  button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .accept {
+    background-color: #28a745;
+    color: #fff;
+  }
+  .reject {
+    background-color: #dc3545;
+    color: #fff;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="offer">
+    <h2>Offer Details</h2>
+    <div class="offer-info">
+      <p><strong>Offer Name:</strong> Alank</p>
+      <p><strong>Age:</strong> 65</p>
+      <p><strong>Offer Description:</strong> Music tutor</p>
+    </div>
+    <button class="accept" onclick="acceptOffer('Alank')">Accept Offer</button>
+    <button class="reject" onclick="rejectOffer('Alank')">Reject Offer</button>
+  </div>
+
+  <div class="offer">
+    <h2>Offer Details</h2>
+    <div class="offer-info">
+      <p><strong>Offer Name:</strong> John</p>
+      <p><strong>Age:</strong> 59</p>
+      <p><strong>Offer Description:</strong> Museum guide at MAP</p>
+    </div>
+    <button class="accept" onclick="acceptOffer('John')">Accept Offer</button>
+    <button class="reject" onclick="rejectOffer('John')">Reject Offer</button>
+  </div>
+</div>
+
+<script>
+function acceptOffer(offerName) {
+  // Send request to server to accept the offer
+  fetch('/acceptOffer', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ offerName, status: 'accepted' })
+  })
+  .then(response => {
+    if (response.ok) {
+      console.log("Offer accepted successfully");
+      // Optionally, redirect to a success page or update UI
+    } else {
+      console.error("Failed to accept offer");
+      // Optionally, display an error message to the user
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    // Optionally, display an error message to the user
+  });
+}
+
+function rejectOffer(offerName) {
+  // Send request to server to reject the offer
+  fetch('/rejectOffer', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ offerName, status: 'rejected' })
+  })
+  .then(response => {
+    if (response.ok) {
+      console.log("Offer rejected successfully");
+      // Optionally, redirect to a success page or update UI
+    } else {
+      console.error("Failed to reject offer");
+      // Optionally, display an error message to the user
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    // Optionally, display an error message to the user
+  });
+}
+</script>
+
+</body>
+</html>
